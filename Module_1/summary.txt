@@ -1,0 +1,13 @@
+In this project, we worked with a dataset of doodles from the QuickDraw dataset, which contains drawings from people all around the world. Our dataset was a subset consisting of 10 categories of doodles.
+
+We started by loading the dataset, which was stored as a NumPy file. The dataset consisted of two parts: X, which were the features or inputs to our model, and Y, which were the labels or outputs. The X dataset was a collection of 784-dimensional vectors, each representing an image of a doodle. The Y dataset contained the corresponding labels for these images.
+
+Before feeding the data to our model, we preprocessed it by normalizing the pixel values in the images. This was done to bring all pixel values within the range of 0 to 1, which makes it easier for the model to learn from the data.
+
+We then built a neural network model using Keras, a high-level neural networks API. Our model was a sequential model, meaning that it consisted of a linear stack of layers. We added three hidden layers to the model, with 500, 250, and 100 nodes respectively, and used the ReLU (Rectified Linear Unit) activation function in these layers. The output layer of the model had 10 neurons (one for each class in our data) and used the softmax activation function, which outputs a probability distribution over the classes.
+
+We compiled the model using the stochastic gradient descent (SGD) optimizer and the sparse categorical cross-entropy loss function, both of which are suitable for multi-class classification problems.
+
+After training the model for 20 epochs, we analyzed the training and validation losses and accuracies to evaluate the performance of our model. We also discussed the concept of overfitting, which is when a model performs well on the training data but poorly on unseen data, and we identified signs of this in our model.
+
+Lastly, we experimented with different configurations of our model. We changed the optimizer to Adam, which is a more advanced optimizer that adapts the learning rate for each weight in the model, and observed how this affected the model's performance. We also discussed changing the activation function in the model's hidden layers from ReLU to sigmoid, and the potential impact of this change on the model's learning outcomes.
