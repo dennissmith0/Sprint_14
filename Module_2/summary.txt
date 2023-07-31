@@ -1,0 +1,19 @@
+we focused on fine-tuning the hyperparameters of a neural network for a multi-class classification problem using the QuickDraw-10 dataset.
+
+We started by loading and pre-processing the dataset, which involved normalizing the features (pixel values) to be between 0 and 1. This is crucial because neural networks often perform better and converge faster when the input features are on a similar scale.
+
+Next, we built a function create_model to generate and compile a Keras Sequential model. This function made it easy to experiment with different configurations. The model had one hidden layer with 250 nodes and a sigmoid activation function, and an output layer with 10 nodes (corresponding to the 10 classes) and a softmax activation function.
+
+We then embarked on a series of experiments to understand the impact of various hyperparameters:
+
+Normalization: We trained models on both normalized and non-normalized data, and observed that the model trained on normalized data achieved higher accuracy. This demonstrated the importance of input data normalization in neural networks.
+
+Batch size: We experimented with different batch sizes (i.e., the number of training examples used in one iteration of model training) and observed how it affected the model's accuracy and training time.
+
+Learning rate: We experimented with different learning rates (i.e., the step size during gradient descent) and observed its impact on the model's accuracy.
+
+Optimizer: We experimented with different optimizers (i.e., the algorithms used to update the weights of the network based on the calculated loss function), and observed their impact on the model's accuracy.
+
+Each experiment involved training multiple models, each with a different value of the hyperparameter in question. We used TensorBoard to visualize the training process and results of each model. Based on these experiments, we identified the best performing model configuration.
+
+This project highlighted the importance of hyperparameter tuning in achieving optimal performance from a neural network.

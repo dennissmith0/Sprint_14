@@ -1,0 +1,59 @@
+Question 1: What is the reason for applying gradient descent to a neural network?
+
+Answer: To find the parameter values (weights and biases) that minimize the loss function (i.e., minimize model error).
+
+Explanation: Gradient descent is an optimization algorithm used to find the minimum of a function. In the context of neural networks, the function we want to minimize is the loss function, which measures the difference between the model's predictions and the true values. By applying gradient descent, we iteratively adjust the model's weights and biases to minimize the loss function, thereby improving the model's accuracy.
+
+Question 2: Which of the following is not a type of gradient descent commonly implemented in neural networks?
+
+Answer: Learning rate gradient descent.
+
+Explanation: There are several types of gradient descent algorithms commonly used in neural networks, including batch gradient descent, stochastic gradient descent, and mini-batch gradient descent. These differ in how much data is used to compute the gradient of the loss function. "Learning rate gradient descent" is not a recognized term in this context.
+
+Question 3: What is a batch?
+
+Answer: The number of samples that are used to determine each parameter update step during neural network training.
+
+Explanation: In the context of training neural networks, a "batch" refers to a subset of the training data. At each step of the training process (also known as an "iteration"), the model's parameters are updated based on the error it made on the current batch. The size of the batch is a key hyperparameter that can affect the speed and stability of the training process.
+
+Question 4: How should you change the batch size to reduce the training time of a neural network?
+
+Answer: Increase the batch size.
+
+Explanation: The batch size is inversely proportional to the number of updates made during an epoch and, consequently, the time taken for each epoch. A larger batch size means fewer updates, which can speed up the training process. However, it's important to note that a larger batch size may also lead to less accurate models or overfitting because the model has fewer opportunities to update and refine its parameters.
+
+Question 5: What is the default batch size in Keras?
+
+Answer: 32.
+
+Explanation: The default batch size in Keras is 32. This is a commonly used batch size, but it may need to be adjusted depending on the specific problem and the amount of available memory.
+
+Question 6: Which of the following choices best describes the learning rate?
+
+Answer: The scale factor applied to the gradients to determine parameter updates.
+
+Explanation: The learning rate is a hyperparameter that determines the step size during gradient descent. A larger learning rate means that the model's parameters will be updated more dramatically at each step, which can speed up the learning process but also risk overshooting the minimum of the loss function.
+
+Question 7: What is a disadvantage of using a large learning rate?
+
+Answer: There might not be convergence toward a minimum of the loss function.
+
+Explanation: A large learning rate can cause the optimization process to "jump over" the minimum of the loss function, resulting in a failure to converge to the optimal solution. This is because the updates to the model's parameters are too large, leading to oscillation around the minimum or even divergence.
+
+Question 8: Suppose we have a model with a hidden layer of 250 nodes, an output layer of 10 nodes, and we use the batch size equal to the number of data points. If we train the model for 25 epochs, how many times will the weights be adjusted during the training?
+
+Answer: 25.
+
+Explanation: With batch gradient descent, the weights are updated once for each pass through the entire training dataset, which constitutes one epoch. So, if you train the model for 25 epochs, the weights will be adjusted 25 times.
+
+Question 9: Which of the following choices best describes the distribution of the final weights of the normalized model compared to the non-normalized model, both relative to the initial weights?
+
+Answer: The model weights are distributed more widely for the model using normalized data.
+
+Explanation: Normalizing input data is a common preprocessing step that can make the training process more efficient and stable. When the input data is normalized, the model's weights can explore a more balanced and symmetric space, leading to a wider distribution of weights.
+
+Question 10: In the following figure, why do the lines closer to the bottom of the plot (larger learning rate) "jump" around more in validation accuracy compared to the lines closer to the top (smaller learning rate)?
+
+Answer: A large learning rate results in larger parameter updates, which may overshoot the optimal parameter values. The next update overcorrects in the opposite direction, and so on. This can result in wild variations in accuracy as the model tries to find a better fit.
+
+Explanation: When the learning rate is large, the steps taken by the gradient descent algorithm are also large. This can cause the algorithm to overshoot the minimum of the loss function and then correct itself in the next step, leading to fluctuations in the model's accuracy. In contrast, a smaller learning rate results in smaller steps, allowing the algorithm to converge more smoothly to the minimum.
