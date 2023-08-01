@@ -11,4 +11,10 @@ In the final part of the assignment, we experimented with changing the model's o
 
 # Train
 
-W experimented with various hyperparameters to optimize a neural network model for a multi-class classification problem using the QuickDraw-10 dataset. We created a function to build and compile the model, which had one hidden layer with 250 nodes and an output layer with 10 nodes. We then conducted a series of experiments to assess the impact of input data normalization, batch size, learning rate, and optimizer type on the model's performance. We used TensorBoard to visualize the training process and results. Based on these experiments, we identified the best performing model configuration.
+We experimented with various hyperparameters to optimize a neural network model for a multi-class classification problem using the QuickDraw-10 dataset. We created a function to build and compile the model, which had one hidden layer with 250 nodes and an output layer with 10 nodes. We then conducted a series of experiments to assess the impact of input data normalization, batch size, learning rate, and optimizer type on the model's performance. We used TensorBoard to visualize the training process and results. Based on these experiments, we identified the best performing model configuration.
+
+# Tune
+
+We optimized a neural network to classify hand-drawn images from the QuickDraw-10 dataset. We loaded and normalized the data, defined a customizable model architecture, and set a range for various hyperparameters. We then used Keras Tuner's Bayesian Optimization to find the optimal hyperparameters. Bayesian Optimization builds a probability model of the objective function to intelligently suggest promising hyperparameters, resulting in an efficient search process. We trained and evaluated models using these parameters, aiming to find the best-performing model configuration.
+
+# Deploy
