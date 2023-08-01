@@ -1,0 +1,13 @@
+We extended our understanding of neural network hyperparameter tuning by focusing on Bayesian Optimization. The primary steps involved were:
+
+Data Loading and Preprocessing: We loaded the QuickDraw-10 dataset, which contains simple hand-drawn doodles categorized into 10 classes. We normalized the pixel values to be between 0 and 1, which aids in model training.
+
+Model Building: We built a customizable Keras model using the Sequential API. The model was designed with flexibility to adjust parameters such as the number of layers, nodes in each layer, and the activation function.
+
+Hyperparameter Selection: We defined the range of values for each hyperparameter we wanted to optimize. These included the learning rate, batch size, and the optimizer.
+
+Bayesian Optimization: We used Keras Tuner's Bayesian Optimization to search the hyperparameter space. Unlike Grid Search and Random Search, Bayesian Optimization builds a probability model of the objective function and uses it to select the most promising hyperparameters to evaluate in the true objective function.
+
+Model Training and Evaluation: We trained the models using the parameters suggested by the Bayesian Optimizer and evaluated them on a validation set. The goal was to find the model configuration that performed the best on unseen data.
+
+Through this project, we learned the importance of hyperparameter tuning in improving model performance. We explored Bayesian Optimization, a method that efficiently navigates the hyperparameter space to find the optimal configuration with fewer iterations than exhaustive search methods.

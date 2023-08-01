@@ -1,0 +1,69 @@
+Which of the following is not a type of layer in a neural network?
+
+Answer: Softmax
+
+Explanation: While Softmax is an important function used in neural networks, it is not a type of layer. It is an activation function that's often used in the output layer of a neural network for multi-class classification problems. On the other hand, input, hidden, and output refer to the three main types of layers in a neural network.
+
+What is a significant limitation of a perceptron?
+
+Answer: The data must be linearly separable so the model will converge.
+
+Explanation: A perceptron is a simple type of neural network that can only solve linearly separable problems. If the data is not linearly separable, a single-layer perceptron will not be able to find a solution (i.e., it will not converge).
+
+In a feed forward neural network, how many output neurons do you need for a binary classification problem?
+
+Answer: 1
+
+Explanation: For binary classification problems, we only need one output neuron, which can output a value between 0 and 1. This value can then be interpreted as the probability of belonging to one of the two classes.
+
+Which of the following choices would add a hidden dense layer with 8 nodes to a neural network using the Keras sequential model API?
+
+Answer: model.add(tf.keras.layers.Dense(8))
+
+Explanation: This line of code adds a dense (fully connected) layer with 8 nodes to the model. The Dense function in Keras is used to create a dense layer, and the argument 8 specifies the number of nodes in the layer.
+
+Which activation function is best suited for a multi-class classification problem?
+
+Answer: Softmax
+
+Explanation: The softmax function is used in the output layer of a neural network model for multi-class classification problems. It outputs a vector that represents the probability distribution of a list of potential outcomes.
+
+Which of the following is not a component of neural network architecture that is adjusted to find a good architecture?
+
+Answer: sequential model
+
+Explanation: The sequential model is a type of model, not a component of the architecture that we adjust. On the other hand, the number of hidden layers, the optimization function, and the activation function are all parameters that we can tune to find a good architecture for our neural network.
+
+What is the best way to determine the neural network architecture for a specific data set?
+
+Answer: Trial and error - the best method is to adjust the different parameters and analyze the results.
+
+Explanation: While there are some general guidelines for choosing a neural network architecture, there's no one-size-fits-all solution. The best architecture often depends on the specific characteristics of the data and the problem at hand. Therefore, it's usually necessary to experiment with different architectures and parameters to find the best one.
+
+When you loaded your quickdraw dataset, what are the dimensions of your feature matrix?
+
+Answer: (100000, 784)
+
+Explanation: The feature matrix X in the QuickDraw dataset consists of 100,000 samples, each of which is a 784-dimensional vector representing an image of a doodle.
+
+How many unique labels do we have in the quickdraw dataset?
+
+Answer: 10
+
+Explanation: There are 10 unique labels in the QuickDraw dataset, corresponding to the 10 categories of doodles.
+
+For the first (baseline) model in the assignment, how many layers did you use and how many nodes were in each layer?
+
+Answer: Three layers, with 500, 250, and 100 nodes, respectively.
+
+Explanation: In the baseline model, we used three hidden layers with 500, 250, and 100 nodes respectively.
+
+Where do we specify the loss function when we create a Sequential model?
+Answer: In the model.compile() step
+
+Explanation: The loss function is specified in the compile() step of building a Sequential model in Keras.
+
+If our model is overfitting, what adjustment could we make if we want to keep the model architecture?
+Answer: Train for fewer epochs.
+
+Explanation: If a model is overfitting, it means it is learning the training data too well, including the noise and outliers, and hence, performs poorly on unseen data. One way to prevent overfitting while keeping the architecture the same is to train the model for fewer epochs. This stops the model from learning the noise in the training data, helping it to generalize better to new data.

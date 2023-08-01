@@ -1,0 +1,24 @@
+Question: Which of the following are considered neural network "parameters"?
+Answer: Weights; Biases
+Explanation: In the context of neural networks, parameters specifically refer to the internal variables that the model learns during training. These are the weights and biases. On the other hand, the number of neurons, the optimizer, and the activation functions are considered hyperparameters, which are externally set and guide the learning process.
+
+Question: If we had 4 hyperparameters with 4 choices each and 4 cross-validation folds, how many times would my model be estimated in a grid search?
+Answer: 64
+Explanation: In a grid search, we try every combination of hyperparameters. So if we have 4 hyperparameters and each has 4 options, that's 
+4^4 = 256 total combinations. And for each combination, the model is trained on each of the 4 folds of cross-validation, so the model is trained a total of 256×4=1024 times.
+
+Question: Consider the following code example - what are the three hyperparameters that are being tuned?
+# Specify the parameters and values
+HP_NUM_UNITS = hp.HParam('num_units', hp.Discrete([8, 16]))
+HP_DROPOUT = hp.HParam('dropout', hp.RealInterval(0.1, 0.2))
+HP_OPTIMIZER = hp.HParam('optimizer', hp.Discrete(['adam', 'sgd']))
+Answer: number of units in the dense layer, the optimizer, the dropout rate
+Explanation: The code snippet is defining three hyperparameters to be tuned: 'num_units' which corresponds to the number of units in the dense layer, 'dropout' which refers to the dropout rate, and 'optimizer' which is the optimizer used for training.
+
+Question: Are the number of layers and the number of nodes in each layer hyperparameters that we can tune to achieve better model accuracy?
+Answer: Yes. Both the number of layers and the nodes in those layers can be treated as hyperparameters that are tuned.
+Explanation: Both the number of layers and the number of nodes in each layer in a neural network are hyperparameters that can be tuned. Adjusting these values can significantly impact the model's ability to learn complex patterns in the data, and thus, its accuracy.
+
+Question: What are the three optimization methods that were tested in the Module Project?
+Answer: Brute force gridsearch, random search, and Bayesian optimization
+Explanation: The three optimization methods that were tested in the module project are brute force gridsearch, random search, and Bayesian optimization. These methods are all strategies for searching the hyperparameter space to find the combination that results in the best model performance. Gridsearch and random search are more straightforward methods that involve exhaustively trying all combinations or randomly sampling combinations, respectively. Bayesian optimization is a more sophisticated approach that uses a probabilistic model to predict which combination is most likely to improve performance and focuses the search in that area.
